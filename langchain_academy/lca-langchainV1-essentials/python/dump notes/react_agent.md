@@ -1,0 +1,3 @@
+# React Agent
+
+A ReAct (Reasoning and Acting) agent is an AI system that combines step-by-step reasoning with the ability to take actions to solve complex problems. It works by using a large language model (LLM) to first "think" about a task, then "act" by using external tools (like a search engine or database) to get information, and finally, observe the results to decide the next step. This cycle of reasoning and acting allows the agent to go beyond its initial training data and perform tasks that require real-time information or interaction with other systems.
