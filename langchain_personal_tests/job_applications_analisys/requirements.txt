@@ -1,0 +1,17 @@
+# Requirements for Job Market Analysis Dashboard
+# Install with: pip install -r requirements.txt
+
+# Data manipulation
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Visualization
+plotly>=5.18.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Dashboard
+streamlit>=1.28.0
+
+# Utilities
+kaleido>=0.2.1  # For static image export in Plotly
