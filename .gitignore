@@ -1,3 +1,2 @@
-langchain_academy/Quickstart: LangChain Essentials - Python/.env
-langchain_academy/.env
-langchain_personal_tests/job_applications_analisys/.env
+# Ignoring all .env in directories
+*.env
