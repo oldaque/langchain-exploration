@@ -3,7 +3,10 @@ from langchain.chat_models import init_chat_model
 from langchain.tools import tool
 from langgraph.graph import MessagesState, StateGraph, END, START
 from dotenv import load_dotenv
+import os
 load_dotenv(".env")
+
+default_model = os.getenv("DEFAULT_MODEL")
 
 @tool
 def write_email(to: str, subject: str, content: str) -> str:
@@ -11,7 +14,7 @@ def write_email(to: str, subject: str, content: str) -> str:
     # Placeholder response - in real app would send email
     return f"Email sent to {to} with subject '{subject}' and content: {content}"
 
-llm = init_chat_model("openai:gpt-4.1", temperature=0)
+llm = init_chat_model(default_model, temperature=0)
 model_with_tools = llm.bind_tools([write_email], tool_choice="any")
 
 def call_llm(state: MessagesState) -> MessagesState:
